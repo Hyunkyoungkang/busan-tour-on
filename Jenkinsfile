@@ -4,7 +4,7 @@ pipeline {
     tools {
         jdk 'jdk17'
         gradle 'G3'
-        docker 'D3'
+        Docker 'D3'
     }
     environment { 
         // jenkins에 등록해 놓은 docker hub credentials 이름
