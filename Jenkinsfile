@@ -4,6 +4,7 @@ pipeline {
     tools {
         jdk 'jdk17'
         gradle 'G3'
+        docker 'D3'
     }
     environment { 
         // jenkins에 등록해 놓은 docker hub credentials 이름
@@ -32,8 +33,8 @@ pipeline {
                 echo 'gradle Build'
                  sh """
                      cd ./project_DiB
-                     chmod +x gradlew
-                     gradlew build -x test
+                     chmod +x ./gradlew
+                     ./gradlew build -x test
                  """
            }
         }
