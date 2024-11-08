@@ -33,7 +33,7 @@ pipeline {
                 echo 'gradle Build'
                  sh """
                      cd ./project_DiB
-                     echo $PWD
+                     pwd
                      chmod +x ./gradlew
                      ./gradlew build -x test
                  """
